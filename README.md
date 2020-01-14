@@ -10,6 +10,7 @@
 # 사용 스택
 
 - react.js
+- golang echo
 - GoogleSheetsAPI
 - react-google-chart
 ```
@@ -29,3 +30,6 @@
 - [ ] 배포
 
 > - 서버
+- [x] 전체적인 구조
+- [ ] 라우팅
+- [ ] 구글 시트 연동
