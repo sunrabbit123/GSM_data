@@ -1,12 +1,14 @@
 import { Chart } from "react-google-charts";
+import './Major.css';
 
-const MajorChart = () => {
+const MajorChart = ( {title} ) => {
   return (
-    <Chart
-      width={'700px'}
-      height={'500px'}
+    <div>
+      <Chart
+      width={'380px'}
+      height={'540px'}
       chartType="PieChart"
-      loader={<div></div>}
+      loader={<div>. </div>}
       data={[
         ['Task', 'Hours per Day'],
         ['Work', 11],
@@ -16,10 +18,12 @@ const MajorChart = () => {
         ['Sleep', 7],
       ]}
       options={{
-        title: '전공 분야',
+        title: { title },
       }}
       rootProps={{ 'data-testid': '1' }}
     />
+    <hr className="hr"/>
+    </div>
   );
 };
 

@@ -1,0 +1,10 @@
+.hr {
+  border: thin solid #ced4da;
+  display: none;
+}
+
+@media screen and (max-width: 1400px) {
+  .hr {
+    display: block;
+  }
+}
