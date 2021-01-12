@@ -1,7 +1,11 @@
+import Header from './Component/header/Header';
+import Chart from './Component/chart/Chart';
+
 function App() {
   return (
     <div>
-      hello
+      <Header />
+      <Chart />
     </div>
   );
 }
