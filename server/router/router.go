@@ -1,6 +1,7 @@
 package router
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/labstack/echo"
@@ -20,4 +21,9 @@ func Router(debug bool) *echo.Echo {
 	})
 
 	return e
+}
+
+func Test() {
+	fmt.Println("Test")
+	return
 }
