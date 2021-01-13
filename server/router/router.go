@@ -16,7 +16,7 @@ func Router(debug bool) *echo.Echo {
 	e.Use(middleware.Recover())
 
 	apiV1 := e.Group("/api/v1")
-	apiV1.GET("/", func(c echo.Context) error {
+	apiV1.GET("", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
 
