@@ -1,4 +1,4 @@
-package main
+package server
 
 import (
 	"fmt"
@@ -8,7 +8,9 @@ import (
 
 func main() {
 	port := "9876"
-	e = router.Router()
+	debug := true
+
+	e = router.Router(debug)
 	startMessage := "Go server at http://127.0.0.1" + port
 	fmt.Println(startMessage)
 
