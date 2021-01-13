@@ -7,17 +7,17 @@ import (
 	"github.com/labstack/echo/middleware"
 )
 
-func Router() *echo.Echo {
+func Router(debug bool) *echo.Echo {
 	e := echo.New()
+	e.Debug = debug
 
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	e.GET("/api/v1", hello)
+	apiV1 := e.Group("/api/v1")
+	apiV1.GET("/", func(c echo.Context) error {
+		return c.String(http.StatusOK, "Hello, World!")
+	})
 
 	return e
-}
-
-func hello(c echo.Context) error {
-	return c.String(http.StatusOK, "Hello, World!")
 }
