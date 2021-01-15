@@ -15,11 +15,17 @@ func Router(debug bool) *echo.Echo {
 	e.Use(middleware.Logger())
 	e.Use(middleware.Recover())
 
-	apiV1 := e.Group("/api/v1")
-	apiV1.GET("", func(c echo.Context) error {
+	e.GET("", func(c echo.Context) error {
 		return c.String(http.StatusOK, "Hello, World!")
 	})
+	api := e.Group("/api")
 
+	v1 := api.Group("/v1")
+
+	dataApi := v1.Group("/data")
+
+	RouteData(dataApi)
+	
 	return e
 }
 
