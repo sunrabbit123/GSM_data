@@ -49,3 +49,7 @@ yarn-error.log*
 /Godeps/
 
 # End of https://www.toptal.com/developers/gitignore/api/go
+
+### google api ###
+credentials.json
+token.json
