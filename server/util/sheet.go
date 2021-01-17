@@ -15,9 +15,8 @@ func checkError(err error) {
 	}
 }
 func GetSheet(spreadsheetId string, readRange string) *sheets.ValueRange {
-	data, err := ioutil.ReadFile("../../secret.json")
+	data, err := ioutil.ReadFile("secret.json")
 	checkError(err)
-
 	conf, err := google.JWTConfigFromJSON(data, sheets.SpreadsheetsScope)
 	checkError(err)
 
