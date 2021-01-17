@@ -51,5 +51,4 @@ yarn-error.log*
 # End of https://www.toptal.com/developers/gitignore/api/go
 
 ### google api ###
-credentials.json
-token.json
+secret.json
