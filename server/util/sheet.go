@@ -2,6 +2,7 @@ package util
 
 import (
 	"io/ioutil"
+	"log"
 
 	"golang.org/x/net/context"
 	"golang.org/x/oauth2/google"
@@ -16,7 +17,6 @@ func checkError(err error) {
 func GetSheet(spreadsheetId string, readRange string) *sheets.ValueRange {
 	data, err := ioutil.ReadFile("secret.json")
 	checkError(err)
-
 	conf, err := google.JWTConfigFromJSON(data, sheets.SpreadsheetsScope)
 	checkError(err)
 
@@ -24,9 +24,11 @@ func GetSheet(spreadsheetId string, readRange string) *sheets.ValueRange {
 	srv, err := sheets.New(client)
 	checkError(err)
 
-	// spreadsheetId := "1gluPeTYankLaAElZfz4FxkpSjeBlhuSD5gnIOF_Lc20"
-	// readRange := "설문지 응답 시트1!A2:E"
 	resp, err := srv.Spreadsheets.Values.Get(spreadsheetId, readRange).Do()
+
+	if err != nil {
+		log.Fatalf("Unable to retrieve data from sheet: %v", err)
+	}
 
 	return resp
 }
