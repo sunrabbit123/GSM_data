@@ -2,7 +2,6 @@ package controller
 
 import (
 	"encoding/json"
-	"fmt"
 	"net/http"
 
 	"github.com/labstack/echo"
@@ -26,7 +25,6 @@ func GetDataAboutTrandTaste(c echo.Context) error {
 
 	sheetData := util.GetSheet(spreadsheetId, readRange)
 	totalLen := len(sheetData.Values)
-	fmt.Println(totalLen)
 
 	if len(sheetData.Values) == 0 {
 		errorCode, _ := json.Marshal(map[string]string{"error": "have a no data"})
