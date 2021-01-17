@@ -5,7 +5,7 @@ import (
 
 	"github.com/labstack/echo"
 
-	"GSM_data/server/controller"
+	"github.com/Goolgae/GSM_data/server/controller"
 )
 
 func RouteData(group *echo.Group) {
