@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"net/http"
 
+	"github.com/Goolgae/GSM_data/server/router/data"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 )
@@ -24,8 +25,8 @@ func Router(debug bool) *echo.Echo {
 
 	dataApi := v1.Group("/data")
 
-	RouteData(dataApi)
-	
+	data.RouteData(dataApi)
+
 	return e
 }
 
