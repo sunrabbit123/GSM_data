@@ -101,8 +101,19 @@ GSM_data> go run server/main.go
       >   - `Etc`는 기타 등등을 뜻함
 
       > `studyMethod`는 공부 방법을 나타낸 값이다.
-      
+      >   - `Book`는 책을 보고 공부했다. 를 뜻한다.
+      >   - `Google`은 구글링을 통해서 공부했다. 를 뜻한다.
+      >   - `Lecture`는 강의를 보고 공부했다. 를 뜻한다.
+      >   - `Official Document`는 공식문서를 보고 공부했다. 를 뜻한다.
+      >   - `QuestionToFriends`는 친구에게 물어봐가며 공부했다. 를 뜻한다.
+      >   그 밑 `Senior`은 선배에게, `Teacher`은 선생님에게 물어봐가며 공부했다를 뜻한다.
+
       > `studyTime`은 공부한 시간을 나타낸 값이다.
+      >   - `One`은 1~2시간
+      >   - `Two`는 2~3시간
+      >   - `Three`는 3~4시간
+      >   - `Four`은 4~6시간
+      >   - `Six`는 6시간 이상을 뜻한다.
       
       > `likeLanguage`는 자신이 좋아하는 언어를 뜻한다.
     
