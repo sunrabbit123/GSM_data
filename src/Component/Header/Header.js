@@ -1,7 +1,7 @@
-import * as S from './Header.scss';
+import * as Style from './Header.scss';
 import classnames from 'classnames';
 import { VscGraph } from "react-icons/vsc";
-const cx = classnames.bind(S); // 미리 S에서 클래스를 받아오도록 설정
+const cx = classnames.bind(Style); // 미리 S에서 클래스를 받아오도록 설정
 
 const Header = () => {
     return (
