@@ -1,24 +1,16 @@
-import './Header.css';
-// import { logo } from "../../images/imgExport";
+import * as S from './Header.scss';
+import classnames from 'classnames';
+import { VscGraph } from "react-icons/vsc";
+const cx = classnames.bind(S); // 미리 S에서 클래스를 받아오도록 설정
 
 const Header = () => {
     return (
-        <header className="header">
-            {/* <img src={ logo } className="logo"/> */}
-            <h1 className="h1">
-                <i className="fas fa-globe"></i>GSM-<span className="data">data</span>
+        <header className={ cx('header') }>
+            <h1>
+                <VscGraph className={ cx('icon', 'mgnR') }/>GSM-<span>data</span>
             </h1>
-            <div>
-                <a href="https://forms.gle/eZ3icUJqNyFgKtDY8" target="blank">
-                    <i class="fas fa-file-alt a3 h2"></i>
-                </a>
-                <i class="fas fa-grip-lines-vertical a3"></i>
-                <a href="https://github.com/Goolgae/GSM_data" target="blank">
-                    <i class="fab fa-github a3 h2"></i>
-                </a>
-            </div>
         </header>
     );
 }
 
-export default Header;
+export default Header; 
