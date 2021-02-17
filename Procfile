@@ -1,1 +1,1 @@
-web: go run server/main.go
+worker: go run server/main.go
