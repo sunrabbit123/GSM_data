@@ -1,1 +1,1 @@
-web: /GSM_data
+web: bin/GSM_data
