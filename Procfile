@@ -1,1 +1,1 @@
-worker: go run server/main.go
+web: bin/GSM_data
