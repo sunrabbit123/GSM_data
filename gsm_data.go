@@ -1,4 +1,4 @@
-package main
+package GSM_data
 
 import (
 	"fmt"
